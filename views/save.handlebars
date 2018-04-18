@@ -1,0 +1,53 @@
+<nav class="navbar fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">NYT Mongo Scrapper</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="/save">Saved Articles</a></li>
+    </ul>
+  </div>
+</nav>
+
+	
+<div class="jumbotron text-center main-background">
+	<div class="row">
+		<h1>NYT Mongo Scraper</h1>
+    <h3>(New York Times)</h3>
+	</div>
+</div>
+
+<div id="saved">
+{{#each saved}}
+  <div data-id="{{_id}}" class="container text-left newsList">
+    <h4>{{title}}</h4>
+    <p>{{summary}}</p>
+    <a href="{{link}}" target="_blank" class="row">Read More Here</a>
+
+    <div data-id="{{_id}}" class="postComment col-md-6">
+      <label for="comment">Comment:</label>
+      <input class="form-control" type="text" id="comment">
+      <input type="submit" id="submit" class="btn-success">
+    </div>
+      
+    
+    <button class="delete btn-danger">Delete This Article</button>
+    <div data-id="{{_id}}" class="seeComments">Comments: {{comments.length}}</div>
+  </div>
+{{/each}}
+</div>
+
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="modal-header">
+    </div>
+    <ol class="modal-comments">
+    </ol>
+  </div>
+
+</div>
