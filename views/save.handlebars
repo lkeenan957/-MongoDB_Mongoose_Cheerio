@@ -26,14 +26,14 @@
     <a href="{{link}}" target="_blank" class="row">Read More Here</a>
 
     <div data-id="{{_id}}" class="postComment col-md-6">
-      <label for="comment">Comment:</label>
-      <input class="form-control" type="text" id="comment">
+      <label for="note">Note:</label>
+      <input class="form-control" type="text" id="note">
       <input type="submit" id="submit" class="btn-success">
     </div>
       
     
     <button class="delete btn-danger">Delete This Article</button>
-    <div data-id="{{_id}}" class="seeComments">Comments: {{comments.length}}</div>
+    <div data-id="{{_id}}" class="seeNotes">Notes: {{notes.length}}</div>
   </div>
 {{/each}}
 </div>
@@ -46,7 +46,7 @@
     <span class="close">&times;</span>
     <div class="modal-header">
     </div>
-    <ol class="modal-comments">
+    <ol class="modal-notes">
     </ol>
   </div>
 
